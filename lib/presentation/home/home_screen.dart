@@ -1,7 +1,6 @@
 import 'package:dares_game/domain/entities/category.dart';
 import 'package:dares_game/presentation/home/home_notifier.dart';
 import 'package:dares_game/presentation/home/widgets/category_card.dart';
-// import 'package:dares_game/presentation/models/snapshot_data.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';

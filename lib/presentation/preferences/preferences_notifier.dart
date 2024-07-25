@@ -1,5 +1,3 @@
-// import 'dart:math';
-
 import 'dart:math';
 
 import 'package:dares_game/data/daos/level_dao.dart';
@@ -46,10 +44,12 @@ class PreferencesNotifier extends ChangeNotifier {
 
   List<int?> previousRandomLevels = [];
 
-  // obtiene el verdad o reto
+  String _title = '¿Que prefieres?';
+  get title => _title;
+
+  // obtiene el que prefieres
   void getPreferences() async {
     preferences.clear();
-
     // obtiene un número del 1 al máximo de los niveles [levels]
     final int randomLevel = Random().nextInt(levels.length) + 1;
 
@@ -79,7 +79,9 @@ class PreferencesNotifier extends ChangeNotifier {
     } catch (er) {
       _isExecutingRequest = false;
     }
-    notifyListeners();
+    _title = preferences.first!.categoryId == 4 ? 'Verdad o reto' : '¿Que prefieres?';
+
     _isExecutingRequest = false;
+    notifyListeners();
   }
 }

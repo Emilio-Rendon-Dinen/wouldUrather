@@ -1,5 +1,6 @@
 import 'package:dares_game/presentation/preferences/components/preference_card.dart';
 import 'package:dares_game/presentation/preferences/preferences_notifier.dart';
+import 'package:dares_game/presentation/preferences/widgets/title_type.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
@@ -18,7 +19,7 @@ class PreferencesScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('¿Que prefieres?'),
+        title: const TitleType(),
         backgroundColor: const Color(0xFF262626),
         titleTextStyle: const TextStyle(color: Colors.white, fontSize: 25),
         leading: IconButton(
